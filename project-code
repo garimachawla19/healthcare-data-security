@@ -1,0 +1,25 @@
+import cv2
+import numpy as np
+
+# load the image into system memory
+image = cv2.imread('inputsample.png', flags=cv2.IMREAD_COLOR)
+
+cv2.imshow('Input Data', image)
+cv2.waitKey()
+cv2.destroyAllWindows()
+
+image_encoded = cv2.blur(src=image, ksize=(5, 5))
+cv2.imshow('Data Processing', image_encoded)
+cv2.waitKey()
+cv2.destroyAllWindows()
+
+image_encoded = cv2.blur(src=image, ksize=(75, 75))
+cv2.imshow('Encrypted Data', image_encoded)
+cv2.waitKey()
+cv2.destroyAllWindows()
+
+cv2.imshow('Decrypted Data', image)
+cv2.waitKey()
+cv2.destroyAllWindows()
+
+ksize=(843957487538, 843957487538)
